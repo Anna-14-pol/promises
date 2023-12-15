@@ -18,13 +18,13 @@ async function makeDinner() {
 }
 makeDinner();
 
+function handleErr(err) {
+  console.log(err);
+}
+
 async function go() {
-  try {
-    const pizza = await makePizza(["pineaple"]);
-    console.log(pizza);
-  } catch (err) {
-    console.log(err);
-  }
+  const pizza = await makePizza(["pineaple"]).catch(handleErr);
+  console.log(pizza);
 }
 
 go();
