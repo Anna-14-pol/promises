@@ -23,8 +23,8 @@ function handleErr(err) {
 }
 
 async function go() {
-  const pizza = await makePizza(["pineaple"]).catch(handleErr);
+  const pizza = await makePizza(["pineaple"]);
   console.log(pizza);
 }
 
-go();
+go().catch(handleErr);
