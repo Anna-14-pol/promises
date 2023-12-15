@@ -17,3 +17,14 @@ async function makeDinner() {
   console.log(peper, mush);
 }
 makeDinner();
+
+async function go() {
+  try {
+    const pizza = await makePizza(["pineaple"]);
+    console.log(pizza);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+go();
