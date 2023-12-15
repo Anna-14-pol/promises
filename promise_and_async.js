@@ -13,7 +13,7 @@ function makePizza(toppings) {
 async function makeDinner() {
   const pizza1 = await makePizza(["peper"]);
   const pizza2 = await makePizza(["mushroom"]);
-  console.log(pizza1);
-  console.log(pizza2);
+  const pizzas = Promise.all([pizza1, pizza2]);
+  console.log(pizzas);
 }
 makeDinner();
